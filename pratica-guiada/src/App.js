@@ -1,7 +1,8 @@
 import Turma from "./Componentes/Turma";
+import { GlobalStyled } from "./GlobalStyled";
 
 function App() {
-  const responsavel = "João";
+  const responsavel = "Calabria";
   const nomeDaTurma = "Ammal";
 
   function apresentarTurma() {
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div className="App">
+      <GlobalStyled />
       <Turma
         turma={nomeDaTurma}
         responsavel={responsavel}

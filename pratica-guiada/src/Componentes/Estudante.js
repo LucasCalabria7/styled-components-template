@@ -1,12 +1,29 @@
+import styled from "styled-components";
+
+const BlocoLista = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3vh auto;
+  background-color: white;
+  width: 30vw;
+  height: 15vh;
+`;
+
+const ItemLista = styled.li`
+  display: flex;
+  justify-content: center;
+`;
+
 function Estudante(props) {
   return (
     <div>
-      <ul>
-        <li>nome: {props.nome}</li>
-        <li>idade: {props.idade}</li>
-        <li>corDaRoupa:{props.corDaRoupa}</li>
-        <li>criadoPor:{props.criadoPor}</li>
-      </ul>
+      <BlocoLista>
+        <ItemLista>nome: {props.nome}</ItemLista>
+        <ItemLista>idade: {props.idade}</ItemLista>
+        <ItemLista>corDaRoupa:{props.corDaRoupa}</ItemLista>
+        <ItemLista>criadoPor:{props.criadoPor}</ItemLista>
+      </BlocoLista>
     </div>
   );
 }

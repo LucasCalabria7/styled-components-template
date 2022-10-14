@@ -1,10 +1,14 @@
 import Carro from "./Carro";
+import styled from "styled-components";
+
+import { Button } from "./GaragemStyle";
+import { Container } from "./GaragemStyle";
 
 function Garagem(props) {
   return (
-    <div>
+    <Container>
       <h1>Garagem da {props.nome}</h1>
-      <button onClick={props.mensagemAprentacao}>Mensagem</button>
+      <Button onClick={props.mensagemAprentacao}>Mensagem</Button>
       <Carro
         adicionadoPor={props.nome}
         cor={"Vermelho"}
@@ -24,7 +28,7 @@ function Garagem(props) {
         flex={"false"}
       />
       <Carro adicionadoPor={props.nome} cor={"Rosa"} ano={2022} flex={"true"} />
-    </div>
+    </Container>
   );
 }
 
